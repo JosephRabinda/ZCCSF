@@ -1495,474 +1495,29 @@ button {
 }
 
 
-/* =========================================================
-   RESPONSIVE DESIGN
-   Works on phones, tablets, laptops and desktops
-   ========================================================= */
-
-/* ---------- GENERAL RESPONSIVE FIXES ---------- */
-
-html {
-    width: 100%;
-    overflow-x: hidden;
-}
-
-body {
-    width: 100%;
-    overflow-x: hidden;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-.container {
-    width: min(92%, 1200px);
-    margin: 0 auto;
-}
 
 
 /* =========================================================
-   TABLETS
-   768px - 1024px
-   ========================================================= */
-
-@media (max-width: 1024px) {
-
-    .container {
-        width: min(92%, 900px);
-    }
-
-    .hero-content {
-        padding: 70px 20px;
-    }
-
-    .hero-title {
-        font-size: clamp(2.5rem, 6vw, 4.5rem);
-    }
-
-    .hero-subtitle {
-        font-size: 1rem;
-    }
-
-    .leadership-grid,
-    .graduates-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-    }
-
-    .impact-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .section-title {
-        font-size: 2.2rem;
-    }
-
-    .countdown {
-        gap: 12px;
-    }
-
-    .countdown-item {
-        min-width: 90px;
-    }
-
-    .site-logo {
-        width: 46px;
-        height: 46px;
-    }
-}
-
-
-/* =========================================================
-   MOBILE DEVICES
-   Up to 767px
-   ========================================================= */
-
-@media (max-width: 767px) {
-
-    /* ---------- CONTAINER ---------- */
-
-    .container {
-        width: 92%;
-        max-width: 100%;
-    }
-
-
-    /* ---------- NAVIGATION ---------- */
-
-    .navbar {
-        padding: 10px 0;
-    }
-
-    .nav-container {
-        padding: 0 4%;
-    }
-
-    .brand {
-        gap: 8px;
-    }
-
-    .site-logo {
-        width: 42px;
-        height: 42px;
-        padding: 3px;
-    }
-
-    .brand-text strong {
-        font-size: 0.82rem;
-    }
-
-    .brand-text small {
-        font-size: 0.55rem;
-    }
-
-    .nav-menu {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: var(--green);
-        display: none;
-        flex-direction: column;
-        align-items: stretch;
-        padding: 15px 5%;
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
-    }
-
-    .nav-menu.active {
-        display: flex;
-    }
-
-    .nav-menu a {
-        width: 100%;
-        padding: 13px 10px;
-        text-align: center;
-        border-bottom: 1px solid rgba(255,255,255,0.1);
-    }
-
-    .nav-toggle {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 5px;
-        width: 40px;
-        height: 40px;
-        border: none;
-        background: transparent;
-        cursor: pointer;
-    }
-
-    .nav-toggle span {
-        display: block;
-        width: 25px;
-        height: 2px;
-        background: var(--white);
-        margin: 0 auto;
-        transition: 0.3s ease;
-    }
-
-
-    /* ---------- HERO ---------- */
-
-    .hero {
-        min-height: auto;
-        padding: 90px 0 70px;
-    }
-
-    .hero-content {
-        padding: 30px 10px;
-        text-align: center;
-    }
-
-    .hero-title {
-        font-size: clamp(2.1rem, 11vw, 3.4rem);
-        line-height: 1.05;
-    }
-
-    .hero-subtitle {
-        font-size: 0.95rem;
-        line-height: 1.6;
-    }
-
-    .hero-description {
-        font-size: 0.9rem;
-        line-height: 1.7;
-    }
-
-
-    /* ---------- COUNTDOWN ---------- */
-
-    .countdown {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-        width: 100%;
-        max-width: 360px;
-        margin: 25px auto;
-    }
-
-    .countdown-item {
-        min-width: 0;
-        padding: 15px 8px;
-    }
-
-    .countdown-number {
-        font-size: 1.8rem;
-    }
-
-    .countdown-label {
-        font-size: 0.65rem;
-    }
-
-
-    /* ---------- SECTIONS ---------- */
-
-    section {
-        padding: 60px 0;
-    }
-
-    .section-title {
-        font-size: 1.9rem;
-        line-height: 1.2;
-    }
-
-    .section-subtitle {
-        font-size: 0.9rem;
-        line-height: 1.6;
-    }
-
-
-    /* ---------- LEADERSHIP ---------- */
-
-    .leadership-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .leader-card {
-        width: 100%;
-    }
-
-    .leader-card img {
-        width: 100%;
-        max-height: 330px;
-        object-fit: cover;
-    }
-
-
-    /* ---------- GRADUATES ---------- */
-
-    .graduates-grid {
-        grid-template-columns: 1fr;
-        gap: 22px;
-    }
-
-    .graduate-card {
-        width: 100%;
-    }
-
-    .graduate-card img {
-        width: 100%;
-        max-height: 350px;
-        object-fit: cover;
-    }
-
-    .graduate-name {
-        font-size: 1.3rem;
-    }
-
-
-    /* ---------- IMPACT SECTION ---------- */
-
-    .impact-grid {
-        grid-template-columns: 1fr;
-        gap: 18px;
-    }
-
-    .impact-card {
-        padding: 25px 20px;
-    }
-
-
-    /* ---------- BUTTONS ---------- */
-
-    .hero-buttons {
-        flex-direction: column;
-        width: 100%;
-        max-width: 320px;
-        margin: 25px auto 0;
-    }
-
-    .btn {
-        width: 100%;
-        text-align: center;
-    }
-
-
-    /* ---------- BALLOONS ---------- */
-
-    .balloon {
-        transform: scale(0.7);
-    }
-
-    .balloon:nth-child(n+5) {
-        display: none;
-    }
-
-
-    /* ---------- FOOTER ---------- */
-
-    footer {
-        padding: 35px 20px;
-        text-align: center;
-    }
-
-    footer p {
-        font-size: 0.8rem;
-        line-height: 1.6;
-    }
-}
-
-
-/* =========================================================
-   VERY SMALL PHONES
-   Up to 400px
-   ========================================================= */
-
-@media (max-width: 400px) {
-
-    .site-logo {
-        width: 38px;
-        height: 38px;
-    }
-
-    .brand-text strong {
-        font-size: 0.75rem;
-    }
-
-    .brand-text small {
-        font-size: 0.48rem;
-    }
-
-    .hero {
-        padding-top: 80px;
-    }
-
-    .hero-title {
-        font-size: 2rem;
-    }
-
-    .hero-subtitle {
-        font-size: 0.85rem;
-    }
-
-    .countdown {
-        max-width: 300px;
-        gap: 7px;
-    }
-
-    .countdown-item {
-        padding: 12px 5px;
-    }
-
-    .countdown-number {
-        font-size: 1.5rem;
-    }
-
-    .countdown-label {
-        font-size: 0.58rem;
-    }
-
-    .section-title {
-        font-size: 1.65rem;
-    }
-}
-
-
-/* =========================================================
-   LARGE DESKTOP SCREENS
-   1400px+
-   ========================================================= */
-
-@media (min-width: 1400px) {
-
-    .container {
-        max-width: 1280px;
-    }
-
-    .hero-title {
-        font-size: 5rem;
-    }
-
-    .hero-content {
-        padding: 100px 20px;
-    }
-
-    section {
-        padding: 100px 0;
-    }
-}
-
-
-/* =========================================================
-   ACCESSIBILITY / TOUCH DEVICES
-   ========================================================= */
-
-@media (hover: none) and (pointer: coarse) {
-
-    .btn,
-    .nav-menu a,
-    .nav-toggle {
-        min-height: 44px;
-    }
-
-    .graduate-card:hover,
-    .leader-card:hover {
-        transform: none;
-    }
-}
-
-
-/* =========================================================
-   REDUCED MOTION
-   Helps users who prefer less animation
-   ========================================================= */
-
-@media (prefers-reduced-motion: reduce) {
-
-    *,
-    *::before,
-    *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
-    }
-}
-
-
-/* =========================================================
-   SMALL & RESPONSIVE LOGO
+   ZCCSF LOGO
+   Small, clean & fully responsive
    ========================================================= */
 
 .site-logo {
-    width: 42px;
-    height: 42px;
+    width: 38px;
+    height: 38px;
     object-fit: contain;
     display: block;
     flex-shrink: 0;
     border-radius: 50%;
-    background: #ffffff;
-    padding: 3px;
+    background: var(--white);
+    padding: 2px;
 }
 
-/* Logo + text */
+/* Logo and brand text */
 .brand {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 7px;
     text-decoration: none;
 }
 
@@ -1970,32 +1525,40 @@ img {
 .brand-text {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     line-height: 1.1;
 }
 
+/* ZCCSF */
 .brand-text strong {
-    font-size: 0.78rem;
+    display: block;
+    color: var(--white);
+    font-size: 0.75rem;
+    font-weight: 700;
     letter-spacing: 0.06em;
+    white-space: nowrap;
 }
 
+/* Graduation 2026 */
 .brand-text small {
-    font-size: 0.55rem;
+    display: block;
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 0.48rem;
     letter-spacing: 0.08em;
+    text-transform: uppercase;
+    white-space: nowrap;
 }
 
-/* Tablets */
+
+/* =========================================================
+   TABLETS
+   ========================================================= */
+
 @media (max-width: 1024px) {
-    .site-logo {
-        width: 38px;
-        height: 38px;
-    }
-}
 
-/* Phones */
-@media (max-width: 767px) {
     .site-logo {
-        width: 34px;
-        height: 34px;
+        width: 36px;
+        height: 36px;
         padding: 2px;
     }
 
@@ -2004,23 +1567,61 @@ img {
     }
 
     .brand-text strong {
-        font-size: 0.70rem;
+        font-size: 0.72rem;
     }
 
     .brand-text small {
-        font-size: 0.48rem;
+        font-size: 0.46rem;
     }
 }
 
-/* Very small phones */
-@media (max-width: 400px) {
+
+/* =========================================================
+   MOBILE PHONES
+   ========================================================= */
+
+@media (max-width: 767px) {
+
     .site-logo {
-        width: 30px;
-        height: 30px;
+        width: 32px;
+        height: 32px;
+        padding: 2px;
+    }
+
+    .brand {
+        gap: 5px;
     }
 
     .brand-text strong {
-        font-size: 0.64rem;
+        font-size: 0.68rem;
+        letter-spacing: 0.04em;
+    }
+
+    .brand-text small {
+        font-size: 0.42rem;
+        letter-spacing: 0.06em;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+    .site-logo {
+        width: 29px;
+        height: 29px;
+        padding: 1px;
+    }
+
+    .brand {
+        gap: 5px;
+    }
+
+    .brand-text strong {
+        font-size: 0.62rem;
     }
 
     .brand-text small {

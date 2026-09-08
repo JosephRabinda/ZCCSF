@@ -241,3 +241,97 @@ if (navToggle && navMenu) {
         });
     });
 }
+
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   GRADUATES PAGE BACKGROUND MUSIC
+   Uses the video only as an audio source.
+   The video itself remains completely hidden.
+   ========================================================= */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const backgroundMusic = document.getElementById("backgroundMusic");
+    const musicToggle = document.getElementById("musicToggle");
+
+    // Stop if this is not the graduates page
+    if (!backgroundMusic || !musicToggle) {
+        return;
+    }
+
+    /*
+     * Start muted first.
+     * Browsers generally allow muted autoplay.
+     */
+    backgroundMusic.muted = true;
+
+    backgroundMusic.play()
+        .then(() => {
+
+            /*
+             * The browser allowed the video to start,
+             * but it is muted initially.
+             */
+
+            musicToggle.textContent = "🔊 Play Music";
+
+        })
+        .catch(() => {
+
+            console.log("Autoplay was blocked by the browser.");
+
+            musicToggle.textContent = "🔊 Play Music";
+
+        });
+
+
+    /*
+     * When visitor clicks the music button,
+     * unmute and start the music.
+     */
+
+    musicToggle.addEventListener("click", async () => {
+
+        try {
+
+            if (backgroundMusic.paused) {
+
+                backgroundMusic.muted = false;
+
+                await backgroundMusic.play();
+
+                musicToggle.textContent = "🔊 Music On";
+                musicToggle.classList.add("playing");
+
+            } else if (backgroundMusic.muted) {
+
+                backgroundMusic.muted = false;
+
+                musicToggle.textContent = "🔊 Music On";
+                musicToggle.classList.add("playing");
+
+            } else {
+
+                backgroundMusic.muted = true;
+
+                musicToggle.textContent = "🔇 Music Off";
+                musicToggle.classList.remove("playing");
+            }
+
+        } catch (error) {
+
+            console.log("Unable to play background music:", error);
+
+        }
+
+    });
+
+});

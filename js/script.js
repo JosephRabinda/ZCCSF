@@ -220,3 +220,24 @@ function initRevealAnimations() {
 if (document.body.classList.contains("page-graduates")) {
     setTimeout(() => launchCelebration(30), 900);
 }
+
+
+/* =========================================================
+   MOBILE NAVIGATION
+   ========================================================= */
+
+const navToggle = document.getElementById("navToggle");
+const navMenu = document.querySelector(".nav-menu");
+
+if (navToggle && navMenu) {
+
+    navToggle.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
+    });
+
+    navMenu.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => {
+            navMenu.classList.remove("active");
+        });
+    });
+}

@@ -1941,3 +1941,89 @@ img {
         scroll-behavior: auto !important;
     }
 }
+
+
+/* =========================================================
+   SMALL & RESPONSIVE LOGO
+   ========================================================= */
+
+.site-logo {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+    display: block;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: #ffffff;
+    padding: 3px;
+}
+
+/* Logo + text */
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+}
+
+/* Brand text */
+.brand-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+}
+
+.brand-text strong {
+    font-size: 0.78rem;
+    letter-spacing: 0.06em;
+}
+
+.brand-text small {
+    font-size: 0.55rem;
+    letter-spacing: 0.08em;
+}
+
+/* Tablets */
+@media (max-width: 1024px) {
+    .site-logo {
+        width: 38px;
+        height: 38px;
+    }
+}
+
+/* Phones */
+@media (max-width: 767px) {
+    .site-logo {
+        width: 34px;
+        height: 34px;
+        padding: 2px;
+    }
+
+    .brand {
+        gap: 6px;
+    }
+
+    .brand-text strong {
+        font-size: 0.70rem;
+    }
+
+    .brand-text small {
+        font-size: 0.48rem;
+    }
+}
+
+/* Very small phones */
+@media (max-width: 400px) {
+    .site-logo {
+        width: 30px;
+        height: 30px;
+    }
+
+    .brand-text strong {
+        font-size: 0.64rem;
+    }
+
+    .brand-text small {
+        display: none;
+    }
+}

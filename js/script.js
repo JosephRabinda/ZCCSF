@@ -335,3 +335,33 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const music = document.getElementById("backgroundMusic");
+
+    if (!music) return;
+
+    // Set background music volume
+    music.volume = 0.35;
+
+    // Try to play automatically
+    music.play().catch(() => {
+        console.log("Autoplay was blocked by the browser.");
+    });
+
+    // If browser blocks autoplay,
+    // start music after the visitor interacts with the page
+    const startMusic = () => {
+        music.play().catch(() => {});
+
+        document.removeEventListener("click", startMusic);
+        document.removeEventListener("touchstart", startMusic);
+        document.removeEventListener("keydown", startMusic);
+    };
+
+    document.addEventListener("click", startMusic);
+    document.addEventListener("touchstart", startMusic);
+    document.addEventListener("keydown", startMusic);
+});
